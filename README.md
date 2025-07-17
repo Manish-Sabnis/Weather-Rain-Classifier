@@ -77,4 +77,12 @@ git clone https://github.com/your-username/Weather-Rain-Classifier.git
 cd Weather-Rain-Classifier
 pip install -r requirements.txt
 streamlit run app.py
+```
+
+---
+
+
+## Credits
+- Built by [Manish Sabnis](https://github.com/Manish-Sabnis)
+- Inspired by [Pau Labarta Bajo](https://www.linkedin.com/in/pau-labarta-bajo-4432074b/)’s MLOps project walkthrough
 
