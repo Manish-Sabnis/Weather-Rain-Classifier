@@ -3,15 +3,18 @@ from datetime import datetime, timedelta
 from meteostat import Point, Hourly
 import joblib
 import pandas as pd
+from datetime import timezone
 
 st.title("Real-Time Rain Predictor - Mumbai")
 
-# Load model
+
 model = joblib.load('rain_predictor_model.pkl')
 
-# Fetch recent data
+
 location = Point(19.0760, 72.8777)
-end = datetime.utcnow()
+
+end = datetime.now(timezone.utc)
+
 start = end - timedelta(hours=1)
 data = Hourly(location, start, end).fetch()
 

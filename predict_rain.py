@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from meteostat import Point, Hourly
 import pandas as pd
 import joblib
-
+from datetime import timezone
 
 model = joblib.load('rain_predictor_model.pkl')
 
@@ -10,7 +10,7 @@ model = joblib.load('rain_predictor_model.pkl')
 location = Point(19.0760, 72.8777)
 
 
-end = datetime.utcnow()
+end = datetime.now(timezone.utc)
 start = end - timedelta(hours=1)
 
 
@@ -22,9 +22,9 @@ if df.empty:
 else:
     latest = df.iloc[-1]
     features = ['temp', 'dwpt', 'rhum', 'wspd', 'pres']
-    X_input = latest[features].values.reshape(1, -1)
-
+    X_input = pd.DataFrame([latest[features].values], columns=features)
     prediction = model.predict(X_input)[0]
+
     proba = model.predict_proba(X_input)[0]
 
     result = "Rain" if prediction == 1 else "No Rain"
