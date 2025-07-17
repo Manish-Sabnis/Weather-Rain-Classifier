@@ -13,7 +13,7 @@ model = joblib.load('rain_predictor_model.pkl')
 
 location = Point(19.0760, 72.8777)
 
-end = datetime.now(timezone.utc)
+end = datetime.utcnow()
 
 start = end - timedelta(hours=1)
 data = Hourly(location, start, end).fetch()
