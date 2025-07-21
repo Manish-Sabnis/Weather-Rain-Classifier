@@ -23,7 +23,7 @@ jobs:
         pip install -r requirements.txt
 
     - name: Generate features
-      run: python fetch_features.py
+      run: python generate_weather_data.py
 
     - name: Train model
       run: python train_rain_model.py
