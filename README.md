@@ -4,6 +4,7 @@ Predict rain in real-time using weather data from free APIs. This project includ
 
 ## Demo
 [Live Streamlit App](https://weather-rain-classifier-fa55ivjbi3nxuzs5lurn8q.streamlit.app/)
+
 Here is a screenshot in case the app is asleep
 <img width="736" height="543" alt="image" src="https://github.com/user-attachments/assets/b8eb3bf8-a385-426d-8723-e3afd2634446" />
 
