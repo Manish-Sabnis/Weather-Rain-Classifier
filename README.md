@@ -2,10 +2,13 @@
 
 Predict rain in real-time using weather data from free APIs. This project includes a trained ML model, an interactive Streamlit dashboard, and automated workflows using GitHub Actions.
 
-## 🚀 Demo
-🔗 [Live Streamlit App](https://weather-rain-classifier-fa55ivjbi3nxuzs5lurn8q.streamlit.app/)
+## Demo
+[Live Streamlit App](https://weather-rain-classifier-fa55ivjbi3nxuzs5lurn8q.streamlit.app/)
+Here is a screenshot in case the app is asleep
+<img width="736" height="543" alt="image" src="https://github.com/user-attachments/assets/b8eb3bf8-a385-426d-8723-e3afd2634446" />
 
-## 📌 Features
+
+## Features
 - Real-time weather data fetched via Meteostat API
 - Binary classification: Rain or No Rain
 - Trained using Random Forest on features like temperature, humidity, wind, pressure, etc.
@@ -15,7 +18,7 @@ Predict rain in real-time using weather data from free APIs. This project includ
 
 ---
 
-## 📊 Model Workflow
+## Model Workflow
 
 ### Training (`train_rain_model.py`)
 - Uses historical weather data
@@ -31,7 +34,7 @@ Predict rain in real-time using weather data from free APIs. This project includ
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 ├── app.py # Streamlit dashboard
 
 ├── predict_rain.py # Hourly prediction script
@@ -56,7 +59,7 @@ Predict rain in real-time using weather data from free APIs. This project includ
 
 ---
 
-## 🔄 Automation with GitHub Actions
+## Automation with GitHub Actions
 
 ### `predict.yml`
 - Runs **hourly**
@@ -70,7 +73,7 @@ Predict rain in real-time using weather data from free APIs. This project includ
 
 ---
 
-## 📦 Setup Locally
+## Setup Locally
 
 ```bash
 git clone https://github.com/your-username/Weather-Rain-Classifier.git
